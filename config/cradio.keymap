@@ -30,7 +30,11 @@
         tab_up: tab_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp UP_ARROW>;
+            bindings 
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp UP_ARROW>
+                , <&macro_release &kp LCTRL>
+                ;
             label = "TAB_UP";
         };
 
