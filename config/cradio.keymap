@@ -254,6 +254,11 @@
             bindings = <&kp CLCK>;
             key-positions = <10 11>;
         };
+
+        tri_layer {
+            bindings = <&mo 3>;
+            key-positions = <30 32>;
+        };
     };
 
     keymap {
