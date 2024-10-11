@@ -90,6 +90,41 @@
             bindings = <&kp LGUI &kp X>;
             label = "CUT";
         };
+
+        screenshot: screenshot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LSHFT &kp LGUI &kp NUMBER_4>;
+            label = "SCREENSHOT";
+        };
+
+        record: record {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LSHFT &kp LGUI &kp NUMBER_5>;
+            label = "RECORD";
+        };
+
+        f5: f5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI &kp R>;
+            label = "F5";
+        };
+
+        chrome_new_tab: chrome_new_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI &kp T>;
+            label = "CHROME_NEW_TAB";
+        };
+
+        chrome_close: chrome_close {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI &kp W>;
+            label = "CHROME_CLOSE";
+        };
     };
 
     keymap {
