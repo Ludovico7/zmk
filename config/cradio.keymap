@@ -50,9 +50,9 @@
 
         left_layer {
             bindings = <
-&trans    &trans          &kp UP_ARROW    &trans     &trans     &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT  &kp TILDE
-&kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp END    &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE
-&trans    &trans          &trans          &trans     &trans     &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE  &trans
+&trans    &trans          &kp UP_ARROW    &trans     &trans     &trans     &trans     &trans     &trans    &trans
+&kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp END    &trans     &trans     &trans     &trans    &trans
+&trans    &trans          &trans          &trans     &trans     &trans     &trans     &trans     &trans  &trans
                                           &trans     &trans     &trans     &trans
             >;
         };
