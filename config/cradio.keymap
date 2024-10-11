@@ -182,10 +182,10 @@
 
         tri_layer {
             bindings = <
-&sys_reset   &trans  &trans  &screenshot  &record    &trans  &trans  &trans  &trans  &trans
-&bootloader  &trans  &trans  &trans       &trans     &trans  &trans  &trans  &trans  &trans
-&trans       &trans  &trans  &trans       &trans     &trans  &trans  &trans  &trans  &trans
-                             &trans       &trans     &trans  &trans
+&trans  &trans  &trans  &screenshot  &record    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans       &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans       &trans     &trans  &trans  &trans  &trans  &trans
+                        &trans       &trans     &trans  &trans
             >;
         };
     };
