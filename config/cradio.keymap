@@ -27,6 +27,71 @@
         };
     };
 
+    macros {
+        tab_up: tab_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp UP_ARROW>;
+            label = "TAB_UP";
+        };
+
+        tab_left: tab_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LEFT>;
+            label = "TAB_LEFT";
+        };
+
+        tab_right: tab_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp RIGHT>;
+            label = "TAB_RIGHT";
+        };
+
+        chrome_left: chrome_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI &kp LALT &kp LEFT_ARROW>;
+            label = "CHROME_LEFT";
+        };
+
+        chrome_right: chrome_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI &kp LALT &kp RIGHT>;
+            label = "CHROME_RIGHT";
+        };
+
+        terminate: terminate {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp C>;
+            label = "TERMINATE";
+        };
+
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI &kp C>;
+            label = "COPY";
+        };
+
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI &kp V>;
+            label = "PASTE";
+        };
+
+        cut: cut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI &kp X>;
+            label = "CUT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -50,10 +115,10 @@
 
         left_layer {
             bindings = <
-&trans    &trans          &kp UP_ARROW    &trans     &trans     &trans     &trans     &trans     &trans    &trans
-&kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp END    &trans     &trans     &trans     &trans    &trans
-&trans    &trans          &trans          &trans     &trans     &trans     &trans     &trans     &trans  &trans
-                                          &trans     &trans     &trans     &trans
+&trans    &trans          &kp UP_ARROW    &trans     &trans     &trans  &trans  &trans  &trans  &trans
+&kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp END    &trans  &trans  &trans  &trans  &trans
+&trans    &trans          &trans          &trans     &trans     &trans  &trans  &trans  &trans  &trans
+                                          &trans     &trans     &trans  &trans
             >;
         };
 
