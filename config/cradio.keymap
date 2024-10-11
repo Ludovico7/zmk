@@ -90,7 +90,9 @@
                 <&macro_tap>,
                 <&kp LEFT_ARROW>,
                 <&macro_release>,
-                <&kp LGUI &kp LALT>;
+                <&kp LALT>,
+                <&macro_release>,
+                <&kp LGUI>;
 
             label = "CHROME_LEFT";
         };
@@ -106,7 +108,9 @@
                 <&macro_tap>,
                 <&kp RIGHT>,
                 <&macro_press>,
-                <&kp LGUI &kp LALT>;
+                <&kp LALT>,
+                <&macro_release>,
+                <&kp LGUI>;
 
             label = "CHROME_RIGHT";
         };
@@ -178,7 +182,9 @@
                 <&macro_tap>,
                 <&kp NUMBER_4>,
                 <&macro_release>,
-                <&kp LSHFT &kp LGUI>;
+                <&kp LGUI>,
+                <&macro_release>,
+                <&kp LSHFT>;
 
             label = "SCREENSHOT";
         };
@@ -194,7 +200,9 @@
                 <&macro_tap>,
                 <&kp NUMBER_5>,
                 <&macro_press>,
-                <&kp LSHFT &kp LGUI>;
+                <&kp LGUI>,
+                <&macro_release>,
+                <&kp LSHFT>;
 
             label = "RECORD";
         };
