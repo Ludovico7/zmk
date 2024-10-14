@@ -2,9 +2,9 @@
 // SPDX-License-Identifier: MIT
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/bt.h>
 
 / {
     behaviors {
@@ -40,216 +40,167 @@
 
     macros {
         tab_up: tab_up {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp UP_ARROW>,
-                <&macro_release>,
-                <&kp LCTRL>;
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LCTRL>
+        , <&macro_tap &kp UP_ARROW>
+        , <&macro_release &kp LCTRL>
+        ;
+    label = "TAB_UP";
+};
 
-            label = "TAB_UP";
-        };
+tab_left: tab_left {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LCTRL>
+        , <&macro_tap &kp LEFT>
+        , <&macro_release &kp LCTRL>
+        ;
+    label = "TAB_LEFT";
+};
 
-        tab_left: tab_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp LEFT>,
-                <&macro_release>,
-                <&kp LCTRL>;
+tab_right: tab_right {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LCTRL>
+        , <&macro_tap &kp RIGHT>
+        , <&macro_release &kp LCTRL>
+        ;
+    label = "TAB_RIGHT";
+};
 
-            label = "TAB_LEFT";
-        };
+chrome_left: chrome_left {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LGUI>
+        , <&macro_press &kp LALT>
+        , <&macro_tap &kp LEFT_ARROW>
+        , <&macro_release &kp LALT>
+        , <&macro_release &kp LGUI>
+        ;
+    label = "CHROME_LEFT";
+};
 
-        tab_right: tab_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp RIGHT>,
-                <&macro_release>,
-                <&kp LCTRL>;
+chrome_right: chrome_right {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LGUI>
+        , <&macro_press &kp LALT>
+        , <&macro_tap &kp RIGHT>
+        , <&macro_release &kp LALT>
+        , <&macro_release &kp LGUI>
+        ;
+    label = "CHROME_RIGHT";
+};
 
-            label = "TAB_RIGHT";
-        };
+terminate: terminate {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LCTRL>
+        , <&macro_tap &kp C>
+        , <&macro_release &kp LCTRL>
+        ;
+    label = "TERMINATE";
+};
 
-        chrome_left: chrome_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp LEFT_ARROW>,
-                <&macro_release>,
-                <&kp LALT>,
-                <&macro_release>,
-                <&kp LGUI>;
+copy: copy {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LGUI>
+        , <&macro_tap &kp C>
+        , <&macro_release &kp LGUI>
+        ;
+    label = "COPY";
+};
 
-            label = "CHROME_LEFT";
-        };
+paste: paste {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LGUI>
+        , <&macro_tap &kp V>
+        , <&macro_release &kp LGUI>
+        ;
+    label = "PASTE";
+};
 
-        chrome_right: chrome_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp RIGHT>,
-                <&macro_release>,
-                <&kp LALT>,
-                <&macro_release>,
-                <&kp LGUI>;
+cut: cut {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LGUI>
+        , <&macro_tap &kp X>
+        , <&macro_release &kp LGUI>
+        ;
+    label = "CUT";
+};
 
-            label = "CHROME_RIGHT";
-        };
+screenshot: screenshot {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LSHFT>
+        , <&macro_press &kp LGUI>
+        , <&macro_tap &kp NUMBER_4>
+        , <&macro_release &kp LGUI>
+        , <&macro_release &kp LSHFT>
+        ;
+    label = "SCREENSHOT";
+};
 
-        terminate: terminate {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp C>,
-                <&macro_release>,
-                <&kp LCTRL>;
+record: record {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LSHFT>
+        , <&macro_press &kp LGUI>
+        , <&macro_tap &kp NUMBER_5>
+        , <&macro_release &kp LGUI>
+        , <&macro_release &kp LSHFT>
+        ;
+    label = "RECORD";
+};
 
-            label = "TERMINATE";
-        };
+f5: f5 {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LGUI>
+        , <&macro_tap &kp R>
+        , <&macro_release &kp LGUI>
+        ;
+    label = "F5";
+};
 
-        copy: copy {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp C>,
-                <&macro_release>,
-                <&kp LGUI>;
+chrome_new_tab: chrome_new_tab {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LGUI>
+        , <&macro_tap &kp T>
+        , <&macro_release &kp LGUI>
+        ;
+    label = "CHROME_NEW_TAB";
+};
 
-            label = "COPY";
-        };
+chrome_close: chrome_close {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LGUI>
+        , <&macro_tap &kp W>
+        , <&macro_release &kp LGUI>
+        ;
+    label = "CHROME_CLOSE";
+};
 
-        paste: paste {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp V>,
-                <&macro_release>,
-                <&kp LGUI>;
-
-            label = "PASTE";
-        };
-
-        cut: cut {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp X>,
-                <&macro_release>,
-                <&kp LGUI>;
-
-            label = "CUT";
-        };
-
-        screenshot: screenshot {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp NUMBER_4>,
-                <&macro_release>,
-                <&kp LGUI>,
-                <&macro_release>,
-                <&kp LSHFT>;
-
-            label = "SCREENSHOT";
-        };
-
-        record: record {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp NUMBER_5>,
-                <&macro_release>,
-                <&kp LGUI>,
-                <&macro_release>,
-                <&kp LSHFT>;
-
-            label = "RECORD";
-        };
-
-        f5: f5 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp R>,
-                <&macro_release>,
-                <&kp LGUI>;
-
-            label = "F5";
-        };
-
-        chrome_new_tab: chrome_new_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp T>,
-                <&macro_release>,
-                <&kp LGUI>;
-
-            label = "CHROME_NEW_TAB";
-        };
-
-        chrome_close: chrome_close {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp W>,
-                <&macro_release>,
-                <&kp LGUI>;
-
-            label = "CHROME_CLOSE";
-        };
     };
 
     combos {
@@ -306,12 +257,12 @@
             >;
         };
 
-        layer_3 {
+        tri_layer {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                                    &trans  &trans    &trans  &trans
+&bt BT_SEL 0  &bt BY_SEL 1   &none      &none      &none              &none      &none       &none    &none       &none
+&none         &none          &none      &none      &none              &none      &none       &none    &none       &none
+&none         &none          &none      &none      &none              &none      &none       &none    &none       &none
+                                            &none      &none              &none  &none
             >;
         };
     };
