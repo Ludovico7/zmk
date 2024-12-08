@@ -98,50 +98,6 @@ chrome_right: chrome_right {
     label = "CHROME_RIGHT";
 };
 
-terminate: terminate {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = 
-        <&macro_press &kp LCTRL>
-        , <&macro_tap &kp C>
-        , <&macro_release &kp LCTRL>
-        ;
-    label = "TERMINATE";
-};
-
-copy: copy {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = 
-        <&macro_press &kp LGUI>
-        , <&macro_tap &kp C>
-        , <&macro_release &kp LGUI>
-        ;
-    label = "COPY";
-};
-
-paste: paste {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = 
-        <&macro_press &kp LGUI>
-        , <&macro_tap &kp V>
-        , <&macro_release &kp LGUI>
-        ;
-    label = "PASTE";
-};
-
-cut: cut {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = 
-        <&macro_press &kp LGUI>
-        , <&macro_tap &kp X>
-        , <&macro_release &kp LGUI>
-        ;
-    label = "CUT";
-};
-
 screenshot: screenshot {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
@@ -166,39 +122,6 @@ record: record {
         , <&macro_release &kp LSHFT>
         ;
     label = "RECORD";
-};
-
-f5: f5 {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = 
-        <&macro_press &kp LGUI>
-        , <&macro_tap &kp R>
-        , <&macro_release &kp LGUI>
-        ;
-    label = "F5";
-};
-
-chrome_new_tab: chrome_new_tab {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = 
-        <&macro_press &kp LGUI>
-        , <&macro_tap &kp T>
-        , <&macro_release &kp LGUI>
-        ;
-    label = "CHROME_NEW_TAB";
-};
-
-chrome_close: chrome_close {
-    compatible = "zmk,behavior-macro";
-    #binding-cells = <0>;
-    bindings = 
-        <&macro_press &kp LGUI>
-        , <&macro_tap &kp W>
-        , <&macro_release &kp LGUI>
-        ;
-    label = "CHROME_CLOSE";
 };
 
     };
