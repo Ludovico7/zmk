@@ -186,9 +186,9 @@ record: record {
 
         tri_layer {
             bindings = <
-&none  &none           &mmv MOVE_UP    &none            &none    &none     &tab_left     &tab_up  &tab_right     &none
+&none  &none           &mmv MOVE_UP    &msc SCRL_UP            &none    &none     &tab_left     &tab_up  &tab_right     &none
 &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none    &none     &chrome_left  &none    &chrome_right  &none
-&none  &none           &none           &none            &none    &mkp MB3  &mkp MB4      &none    &mkp MB5       &none
+&none  &none           &none           &msc SCRL_DOWN            &none    &mkp MB3  &mkp MB4      &none    &mkp MB5       &none
                                        &none            &to 0    &mkp MB1  &mkp MB2
             >;
         };
