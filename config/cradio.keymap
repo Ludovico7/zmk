@@ -42,118 +42,90 @@
 
     macros {
         tab_up: tab_up {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp UP_ARROW>,
-                <&macro_release>,
-                <&kp LCTRL>;
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LCTRL>
+        , <&macro_tap &kp UP_ARROW>
+        , <&macro_release &kp LCTRL>
+        ;
+    label = "TAB_UP";
+};
 
-            label = "TAB_UP";
-        };
+tab_left: tab_left {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LCTRL>
+        , <&macro_tap &kp LEFT>
+        , <&macro_release &kp LCTRL>
+        ;
+    label = "TAB_LEFT";
+};
 
-        tab_left: tab_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp LEFT>,
-                <&macro_release>,
-                <&kp LCTRL>;
+tab_right: tab_right {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LCTRL>
+        , <&macro_tap &kp RIGHT>
+        , <&macro_release &kp LCTRL>
+        ;
+    label = "TAB_RIGHT";
+};
 
-            label = "TAB_LEFT";
-        };
+chrome_left: chrome_left {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LGUI>
+        , <&macro_press &kp LALT>
+        , <&macro_tap &kp LEFT_ARROW>
+        , <&macro_release &kp LALT>
+        , <&macro_release &kp LGUI>
+        ;
+    label = "CHROME_LEFT";
+};
 
-        tab_right: tab_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp RIGHT>,
-                <&macro_release>,
-                <&kp LCTRL>;
+chrome_right: chrome_right {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LGUI>
+        , <&macro_press &kp LALT>
+        , <&macro_tap &kp RIGHT>
+        , <&macro_release &kp LALT>
+        , <&macro_release &kp LGUI>
+        ;
+    label = "CHROME_RIGHT";
+};
 
-            label = "TAB_RIGHT";
-        };
+screenshot: screenshot {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LSHFT>
+        , <&macro_press &kp LGUI>
+        , <&macro_tap &kp NUMBER_4>
+        , <&macro_release &kp LGUI>
+        , <&macro_release &kp LSHFT>
+        ;
+    label = "SCREENSHOT";
+};
 
-        chrome_left: chrome_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp LEFT_ARROW>,
-                <&macro_release>,
-                <&kp LALT>,
-                <&macro_release>,
-                <&kp LGUI>;
+record: record {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp LSHFT>
+        , <&macro_press &kp LGUI>
+        , <&macro_tap &kp NUMBER_5>
+        , <&macro_release &kp LGUI>
+        , <&macro_release &kp LSHFT>
+        ;
+    label = "RECORD";
+};
 
-            label = "CHROME_LEFT";
-        };
-
-        chrome_right: chrome_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp RIGHT>,
-                <&macro_release>,
-                <&kp LALT>,
-                <&macro_release>,
-                <&kp LGUI>;
-
-            label = "CHROME_RIGHT";
-        };
-
-        screenshot: screenshot {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp NUMBER_4>,
-                <&macro_release>,
-                <&kp LGUI>,
-                <&macro_release>,
-                <&kp LSHFT>;
-
-            label = "SCREENSHOT";
-        };
-
-        record: record {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_press>,
-                <&kp LGUI>,
-                <&macro_tap>,
-                <&kp NUMBER_5>,
-                <&macro_release>,
-                <&kp LGUI>,
-                <&macro_release>,
-                <&kp LSHFT>;
-
-            label = "RECORD";
-        };
     };
 
     combos {
