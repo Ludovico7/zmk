@@ -21,17 +21,17 @@
             quick-tap-ms = <100>;
             require-prior-idle-ms = <135>;
             bindings = <&kp>, <&kp>;
-        }
+        };
 
         ht_shift: hold_tap {
-                    compatible = "zmk,behavior-hold-tap";
-                    #binding-cells = <2>;
-                    flavor = "tap-preferred";
-                    tapping-term-ms = <120>;
-                    quick-tap-ms = <100>;
-                    require-prior-idle-ms = <40>;
-                    bindings = <&kp>, <&kp>;
-                };
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <120>;
+            quick-tap-ms = <100>;
+            require-prior-idle-ms = <40>;
+            bindings = <&kp>, <&kp>;
+        };
 
         cmt: mod_tap {
             compatible = "zmk,behavior-hold-tap";
