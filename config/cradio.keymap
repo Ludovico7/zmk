@@ -17,9 +17,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <120>;
-            quick-tap-ms = <100>;
-            require-prior-idle-ms = <135>;
+            tapping-term-ms = <160>;
+            quick-tap-ms = <120>;
+            require-prior-idle-ms = <80>;
             bindings = <&kp>, <&kp>;
         };
 
@@ -27,9 +27,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <120>;
-            quick-tap-ms = <100>;
-            require-prior-idle-ms = <40>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <110>;
+            require-prior-idle-ms = <70>;
             bindings = <&kp>, <&kp>;
         };
 
@@ -37,14 +37,126 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <145>;
-            quick-tap-ms = <115>;
-            require-prior-idle-ms = <80>;
+            tapping-term-ms = <140>;
+            quick-tap-ms = <100>;
+            require-prior-idle-ms = <60>;
             bindings = <&mo>, <&kp>;
         };
     };
 
     macros {
+        alt_left: alt_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp LEFT_ARROW>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "ALT_LEFT";
+        };
+
+        alt_right: alt_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp RIGHT_ARROW>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "ALT_RIGHT";
+        };
+
+        alt_up: alt_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp UP_ARROW>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "ALT_UP";
+        };
+
+        alt_down: alt_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp DOWN_ARROW>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "ALT_DOWN";
+        };
+
+        cmd_left: cmd_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp LEFT_ARROW>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "CMD_LEFT";
+        };
+
+        cmd_right: cmd_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp RIGHT_ARROW>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "CMD_RIGHT";
+        };
+
+        cmd_up: cmd_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp UP_ARROW>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "CMD_UP";
+        };
+
+        cmd_down: cmd_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp DOWN_ARROW>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "CMD_DOWN";
+        };
+
         tab_up: tab_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -181,7 +293,7 @@
             bindings = <
 &kp Q        &kp W       &kp E       &kp R          &kp T        &kp Y      &kp U        &kp I       &kp O       &kp P
 &ht LCTRL A  &ht LALT S  &ht LGUI D  &ht_shift LSHFT F    &kp G        &kp H      &ht_shift RSHFT J  &ht LGUI K  &ht LALT L  &ht LCTRL SEMICOLON
-&kp Z        &kp X       &kp C       &kp V          &kp B        &kp N      &kp M        &kp COMMA   &kp DOT     &cmt 2 SLASH
+&kp Z        &kp X       &kp C       &kp V          &kp B        &kp N      &kp M        &kp COMMA   &cmt 3 DOT     &cmt 2 SLASH
                                      &kp BACKSPACE  &kp SPACE    &kp ENTER  &mo 1
             >;
         };
@@ -206,11 +318,12 @@
 
         tri_layer {
             bindings = <
-&none  &none           &mmv MOVE_UP    &msc SCRL_UP     &none    &none     &tab_left     &tab_up  &tab_right     &none
-&none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none    &none     &chrome_left  &none    &chrome_right  &none
-&none  &none           &none           &msc SCRL_DOWN   &none    &mkp MB3  &mkp MB4      &none    &mkp MB5       &none
-                                       &none            &none    &mkp MB1  &mkp MB2
+&none  &none      &mmv MOVE_UP  &msc SCRL_UP  &none    &none      &cmd_up      &none       &none      &none
+&none  &alt_left  &alt_down     &alt_right    &none    &cmd_left  &cmd_down    &cmd_right  &none      &none
+&none  &none      &none         &none         &none    &mkp MB3   &none        &none       &none      &none
+                                       &none            &none     &mkp MB1  &mkp MB2
             >;
         };
     };
 };
+
