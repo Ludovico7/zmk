@@ -318,10 +318,10 @@
 
         tri_layer {
             bindings = <
-&none  &none      &alt_up       &msc SCRL_UP  &none    &none      &cmd_up      &none       &none      &none
-&none  &alt_left  &alt_down     &alt_right    &none    &cmd_left  &cmd_down    &cmd_right  &none      &none
-&none  &none      &none         &msc SCRL_DOWN         &none    &mkp MB3   &none        &none       &none      &none
-                                       &none            &none     &mkp MB1  &mkp MB2
+&none  &none      &alt_up       &msc SCRL_UP    &none    &none      &cmd_up      &none       &none      &none
+&none  &alt_left  &alt_down     &alt_right      &none    &cmd_left  &cmd_down    &cmd_right  &none      &none
+&none  &none      &none         &msc SCRL_DOWN  &none    &mkp MB3   &none        &none       &none      &none
+                         &none  &none          &mkp MB1  &mkp MB2
             >;
         };
     };
