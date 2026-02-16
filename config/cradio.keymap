@@ -292,7 +292,7 @@
             bindings = <
 &kp Q        &kp W       &kp E       &kp R          &kp T        &kp Y      &kp U        &kp I       &kp O       &kp P
 &ht LCTRL A  &ht LALT S  &ht LGUI D  &ht_shift LSHFT F    &kp G        &kp H      &ht_shift RSHFT J  &ht LGUI K  &ht LALT L  &ht LCTRL SEMICOLON
-&kp Z        &kp X       &kp C       &kp V          &kp B        &kp N      &kp M        &kp COMMA   &cmt 3 DOT     &cmt 2 SLASH
+&cmt 2 Z        &kp X       &kp C       &kp V          &kp B        &kp N      &kp M        &kp COMMA   &cmt 3 DOT     &cmt 2 SLASH
                                      &kp BACKSPACE  &kp SPACE    &kp ENTER  &mo 1
             >;
         };
